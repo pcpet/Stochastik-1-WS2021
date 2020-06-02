@@ -1,4 +1,4 @@
-# Stochastik-1-WS2021
+# Stochastik-1-WS2020
 The numerical examples from the Stochastik 1 lecture in Winter 2020
 
 The python notebook was written by Max Stolly
