@@ -9,9 +9,9 @@ normal_distributions = zeros(100,3);
 
 for k =1:length(normal_distributions)
     
-    normal_distributions(k,1) = 5*rand;
-    normal_distributions(k,2) = 5*rand;
-    normal_distributions(k,3) = 0.1;    
+    normal_distributions(k,1) = 10*rand;
+    normal_distributions(k,2) = 10*rand;
+    normal_distributions(k,3) = 0.2;    
 end
 
 %% the sum of the last "num_of_center" entries of normal_distributions are the "real" distribution that we seek to find.
@@ -38,7 +38,7 @@ points = [points; newpoint];
 %%% We plot the points and the estimated and true means below:
 
 scatter(points(:,1), points(:,2), [], 'blue');
-if ell > 30
+if ell > 100
 hold off;
 scatter(points(:,1), points(:,2), [], 'blue');
     
@@ -54,7 +54,8 @@ pause(0.1);
 
 
 %%% The computation of the maximum likely estimator is below:
-if mod(ell,15)==0
+if mod(ell,100)==0
+    figure;
     %% buildMatrix
     A = zeros(ell, 100);
     
